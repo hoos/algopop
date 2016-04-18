@@ -24,7 +24,7 @@ public class AlgoPop
     private static ConsoleHandler consoleHandler = new ConsoleHandler();
     
     /**
-     * The logger object used by AlgoPop.
+     * The root logger object used by AlgoPop.
      */
     private static final Logger LOGGER = Logger.getLogger("");
     

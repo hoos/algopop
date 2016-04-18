@@ -21,16 +21,17 @@ import systrading.algopop.command.*;
 
 /**
  * The CMDLineParser uses Apache Commons CLI to parse the command line
- * execute the relevant command class which implements the desired functionality 
+ * execute the relevant command class which implements the desired functionality. 
+ * This class also uses a resource bundle for all messages.  
  * 
- * @author Hussein
+ * @author Hussein Badakhchani
  *
  */
 public class CMDLineParser {
 	
 
     /**
-     * The logger used by the class.
+     * The logger used by this class.
      *
      */
     private static final Logger LOGGER = Logger.getLogger("CMDLineParser");
@@ -55,9 +56,10 @@ public class CMDLineParser {
         // Create Options collection
         final Options options = new Options();
         
+        // Options placed in this group are mutually exclusive
         final OptionGroup commandGroup = new OptionGroup();
 
-        // Setup options
+        // Setup the command line options
         commandGroup.addOption(Option.builder("h").required(false).longOpt("help").desc(messages.getString("help")).build());
         commandGroup.addOption(Option.builder("v").required(false).longOpt("version").desc(messages.getString("version")).build());
         commandGroup.addOption(Option.builder("q").required(false).longOpt("quiet").desc(messages.getString("quiet")).build());
@@ -107,8 +109,9 @@ public class CMDLineParser {
         } catch (UnrecognizedOptionException ue) {
              LOGGER.log(Level.SEVERE, ue.getMessage());
         } catch (MissingOptionException me) {
-             LOGGER.log(Level.CONFIG, me.getMessage());
-             formatter.printHelp("Algopop", options);
+             LOGGER.log(Level.INFO, me.getMessage());
+             formatter.printHelp(120, messages.getString("help_msg_usage"), me.getMessage(),
+             		options, messages.getString("help_msg_footer"));
         } catch (MissingArgumentException mae) {
              LOGGER.log(Level.SEVERE, mae.getMessage());
         } catch (ParseException pe) {
