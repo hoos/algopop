@@ -48,7 +48,6 @@ public class AlgoPop
         }
     }
     
- 
     public static void main( String[] args )
     {
         LOGGER.log(Level.INFO, "Starting AlgoPop");
