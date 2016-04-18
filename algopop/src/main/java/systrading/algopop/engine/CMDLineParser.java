@@ -64,9 +64,7 @@ public class CMDLineParser {
         commandGroup.addOption(Option.builder("vv").required(false).longOpt("verbose").desc(messages.getString("verbose")).build());
         commandGroup.addOption(Option.builder("f").required(false).longOpt("file").desc(messages.getString("file"))
         		.numberOfArgs(3).argName("path> <parser> <algorithm").build());
-        commandGroup.addOption(Option.builder("a").required(false).longOpt("api").desc(messages.getString("api"))
-        		.numberOfArgs(3).argName("provider> <symbol> <algorithm").build());
-        commandGroup.addOption(Option.builder("g").required(false).longOpt("get data").desc(messages.getString("data"))
+        commandGroup.addOption(Option.builder("d").required(false).longOpt("data").desc(messages.getString("data"))
         		.numberOfArgs(3).argName("provider> <symbol> <commandstring").build());
         final Option listapis = new Option("listapis", messages.getString("list_apis"));
         commandGroup.addOption(listapis);
