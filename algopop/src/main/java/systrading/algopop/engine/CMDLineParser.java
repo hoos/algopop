@@ -96,8 +96,8 @@ public class CMDLineParser {
                 LOGGER.log(Level.ALL,
                     messages.getString("verbose"));
             }
-            else if (line.hasOption("file")) {
-            	   String[] fileArgs = line.getOptionValues("file");
+            else if (line.hasOption("data")) {
+            	   String[] fileArgs = line.getOptionValues("data");
             	   DataFileCommand dataFileCommand = new DataFileCommand();
             	   dataFileCommand.execute(fileArgs);
             } else {

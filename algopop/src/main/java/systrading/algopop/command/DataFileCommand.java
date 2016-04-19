@@ -15,6 +15,17 @@ public class DataFileCommand implements Command {
 	}
 
 	public void execute(String[] args) {
-        LOGGER.log(Level.INFO, args[0] + " " + args[1] + " " +  args[2]);		
+		LOGGER.log(Level.INFO, "Executing DataFileCommand");
+        LOGGER.log(Level.INFO, args[0] + " " + args[1] + " " +  args[2]);
+        String[] yahooArgs = new String[3];
+        yahooArgs[0] = args[0].replaceFirst(".*=", "");
+        yahooArgs[1] = args[1].replaceFirst(".*=", "");
+        yahooArgs[2] = args[2].replaceFirst("commandstring=", "");
+        switch (yahooArgs[0]) {
+        case "yahoo": YahooDataFileCommand yahooDataFileCommand = new YahooDataFileCommand();
+        yahooDataFileCommand.execute(yahooArgs);
+        	break;
+        default: LOGGER.log(Level.SEVERE, "Provider Not Found");
+        }
 	}		
 }

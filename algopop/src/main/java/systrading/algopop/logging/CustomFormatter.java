@@ -54,55 +54,56 @@ public class CustomFormatter extends Formatter {
     /**
      * The default format of the log file expressed as the RE %L: %m [%c.%M %t].
      */
-    protected static final String DEFAULT_FORMAT = "%L: %m [%c.%M %t]";
+    //protected static final String DEFAULT_FORMAT = "%L: %m [%c.%M %t]";
+    protected static final String DEFAULT_FORMAT = "%L %t %c: %m";
 
     /**
-     * The expected integer index position of the log level argument position.
+     * The expected integer index position of the log level argument position %L.
      */
     private static final int LOGLEVEL = 0;
 
     /**
-     * The expected integer index position of the log message argument position.
+     * The expected integer index position of the log message argument position %m.
      */
     private static final int MESSAGE = 1;
 
     /**
-     * The expected integer index position of the logger argument.
+     * The expected integer index position of the logger argument %M.
      */
     private static final int LOGGER = 2;
 
     /**
-     * The expected integer index position of the log timestamp argument.
+     * The expected integer index position of the log timestamp argument %t.
      */
     private static final int TIMESTAMP = 3;
 
     /**
-     * The expected integer index position of the method argument.
+     * The expected integer index position of the method argument %c.
      */
     private static final int METHOD = 4;
 
     /**
-     * The expected integer index position of the thread ID argument.
+     * The expected integer index position of the thread ID argument %T.
      */
     private static final int THREAD_ID = 5;
 
     /**
-     * The expected integer index position of the logger name argument.
+     * The expected integer index position of the logger name argument %n.
      */
     private static final int LOGGER_NAME = 6;
 
     /**
-     * Aviod the checksyle Magic Number warning for 7!.
+     * Avoid the checksyle Magic Number warning for 7! %C.
      */
     private static final int SEVEN = 7;
 
     /**
-     * Aviod the checksyle Magic Number warning for 8!.
+     * Avoid the checksyle Magic Number warning for 8!.
      */
     private static final int EIGHT = 8;
 
     /**
-     * Aviod the checksyle Magic Number warning for 128!.
+     * Avoid the checksyle Magic Number warning for 128!.
      */
     private static final int ONETWOEIGHT = 128;
 
