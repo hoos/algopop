@@ -12,7 +12,7 @@ public class ElliotWave {
 	/**
 	 * Wave 2 is typically a 50% or 62% retrenchment from the end high of the Wave 1
 	 * This method starts by verifying the direction of the Wave and then simply compares
-	 * the lengths of the Waves. If the length of Wave 1 is roughly twice that of Wave 2 we have
+	 * the lengths of the Waves. If the lenth of Wave 1 is roughly twice that of Wave 2 we have
 	 * identified and Elliot Wave i.e. the 50% definition of an Elliot Wave 2 
 	 * @param startWave1
 	 * @param endWave1
