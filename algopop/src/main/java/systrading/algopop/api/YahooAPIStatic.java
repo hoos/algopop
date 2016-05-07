@@ -1,13 +1,13 @@
-package com.db.systrading.api;
+package systrading.algopop.api;
 
 /**
  * 
- * @author badahus
+ * @author Hussein Badakhchani
  * This class provides static methods that return format strings for Yahoo Finance APIs.
  * Check out https://greenido.wordpress.com/2009/12/22/yahoo-finance-hidden-api/ for an explanation
  * of the API parameters
  */
-public class YahooAPI {
+public class YahooAPIStatic {
 	
 	/**
 	 * The base URL for Yahoo Finance ichart site

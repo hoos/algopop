@@ -1,4 +1,4 @@
-package com.db.systrading.stock;
+package systrading.algopop.engine;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,6 +7,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import systrading.algopop.dto.Stock;
 
 public class StockFetcher {  
 	

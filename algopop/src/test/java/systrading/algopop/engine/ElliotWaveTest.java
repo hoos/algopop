@@ -1,4 +1,4 @@
-package com.db.systrading.elliotwave;
+package systrading.algopop.engine;
 
 import java.util.ArrayList;
 import java.util.Collections;
