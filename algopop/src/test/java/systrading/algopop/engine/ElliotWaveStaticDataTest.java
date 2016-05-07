@@ -2,6 +2,7 @@ package systrading.algopop.engine;
 
 import org.junit.Assert;
 import org.junit.Test;
+import systrading.algopop.algorithms.ElliotWave;
 
 /**
  * 
