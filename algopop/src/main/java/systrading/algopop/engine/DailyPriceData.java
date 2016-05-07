@@ -1,6 +1,8 @@
-package com.db.systrading.stock;
+package systrading.algopop.engine;
 
-import com.db.systrading.api.YahooAPI;
+import systrading.algopop.api.YahooAPIStatic;
+import systrading.algopop.engine.DailyPriceData;
+import systrading.algopop.dto.Stock;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,7 +14,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
  * 
- * @author badahus
+ * @author Hussein Badakhchani
  *
  */
 public class DailyPriceData {
@@ -43,7 +45,7 @@ public class DailyPriceData {
 
 		try { 
 			// Retrieve CSV File
-			URL yahoo = new URL(YahooAPI.getHistoricalPricesCSV(symbol));
+			URL yahoo = new URL(YahooAPIStatic.getHistoricalPricesCSV(symbol));
 			URLConnection connection = yahoo.openConnection(); 
 			InputStreamReader is = new InputStreamReader(connection.getInputStream());
 			BufferedReader br = new BufferedReader(is); 

@@ -1,4 +1,4 @@
-package com.db.systrading.elliotwave;
+package systrading.algopop.engine;
 
 import org.junit.Assert;
 import org.junit.Test;

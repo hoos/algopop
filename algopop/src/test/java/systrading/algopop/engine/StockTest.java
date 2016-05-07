@@ -1,9 +1,9 @@
-package com.db.systrading.elliotwave;
+package systrading.algopop.engine;
 
 import org.junit.Test;
 
-import com.db.systrading.stock.Stock;
-import com.db.systrading.stock.StockFetcher;
+import systrading.algopop.dto.Stock;
+import systrading.algopop.engine.StockFetcher;
 
 public class StockTest { 
 	

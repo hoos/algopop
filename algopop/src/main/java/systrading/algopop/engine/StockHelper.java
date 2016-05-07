@@ -1,4 +1,4 @@
-package com.db.systrading.stock;
+package systrading.algopop.dto.Stock;
 
 import java.util.regex.Pattern;
 

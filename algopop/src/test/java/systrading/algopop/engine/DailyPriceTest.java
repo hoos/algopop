@@ -1,13 +1,12 @@
-package com.db.systrading.elliotwave;
+package systrading.algopop.engine;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
 import org.junit.Test;
 
-import com.db.systrading.stock.DailyPriceData;
-import com.db.systrading.stock.Stock;
-
+import systrading.algopop.engine.DailyPriceData;
+import systrading.algopop.dto.Stock;
 
 public class DailyPriceTest {
 	

@@ -40,7 +40,6 @@ public class YahooDataFileCommand implements Command {
         		bw.write(line);
         		bw.newLine();
         	}
-            bw.flush();
             bw.close();
         	br.close();   	
         } catch (IOException e) {

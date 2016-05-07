@@ -1,14 +1,13 @@
-package com.db.systrading.elliotwave;
-
+package systrading.algopop.engine;
 import org.junit.Test;
 
-import com.db.systrading.fx.ExRate;
+import systrading.algopop.dto.FxRate;
 import com.db.systrading.fx.FxFetcher;
 
 public class FXTest {
 	@Test
 	public void testStock() { 	
-		ExRate USDGBP = FxFetcher.getExRate("USDGBP=X");
+		FxRate USDGBP = FxFetcher.getExRate("USDGBP=X");
 		System.out.println(USDGBP.getSymbol() + " " + USDGBP.getFxRate()); 
 	}
 }
