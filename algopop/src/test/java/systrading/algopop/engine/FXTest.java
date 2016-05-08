@@ -2,7 +2,7 @@ package systrading.algopop.engine;
 import org.junit.Test;
 
 import systrading.algopop.dto.FxRate;
-import com.db.systrading.fx.FxFetcher;
+import systrading.algopop.engine.FxFetcher;
 
 public class FXTest {
 	@Test

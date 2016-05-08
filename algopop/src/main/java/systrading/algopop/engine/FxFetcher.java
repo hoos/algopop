@@ -8,12 +8,13 @@ import java.net.URLConnection;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.db.systrading.stock.StockFetcher;
-import com.db.systrading.stock.StockHelper;
+import systrading.algopop.engine.StockFetcher;
+import systrading.algopop.engine.StockHelper;
+import systrading.algopop.dto.FxRate;;
 
 public class FxFetcher {
 
-	public static ExRate getExRate(String symbol) {
+	public static FxRate getExRate(String symbol) {
 		double exrate = 0.0;
 		try { 
 			// e	Exchange Rate
@@ -38,6 +39,6 @@ public class FxFetcher {
 			log.log(Level.SEVERE, e.toString(), e);
 		}
 		
-		return new ExRate(symbol, exrate);
+		return new FxRate(symbol, exrate);
 	}
 }

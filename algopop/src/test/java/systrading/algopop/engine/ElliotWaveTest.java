@@ -10,12 +10,13 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.db.systrading.stock.DailyPriceData;
-import com.db.systrading.stock.Stock;
+import systrading.algopop.engine.DailyPriceData;
+import systrading.algopop.dto.Stock;
+import systrading.algopop.algorithms.ElliotWave;
 
 /**
  * 
- * @author badahus
+ * @author Hussein Badakhchani
  *
  */
 public class ElliotWaveTest {

@@ -12,14 +12,14 @@ public class ElliotWave {
 	/**
 	 * Wave 2 is typically a 50% or 62% retrenchment from the end high of the Wave 1
 	 * This method starts by verifying the direction of the Wave and then simply compares
-	 * the lengths of the Waves. If the lenth of Wave 1 is roughly twice that of Wave 2 we have
+	 * the lengths of the Waves. If the length of Wave 1 is roughly twice that of Wave 2 we have
 	 * identified and Elliot Wave i.e. the 50% definition of an Elliot Wave 2 
 	 * @param startWave1
 	 * @param endWave1
 	 * @param endWave2
 	 * @return
 	 */
-	static boolean isWave2pc50(double startWave1, double endWave1, double endWave2, float offset) { 
+	public static boolean isWave2pc50(double startWave1, double endWave1, double endWave2, float offset) { 
 		if (endWave1 > startWave1 && endWave2 < endWave1) {
 			double waveRatio = (endWave1 - endWave2)/(endWave1 - startWave1);
 			if( waveRatio >= (0.5 - offset) && waveRatio <= (0.5 + offset)) {
@@ -40,7 +40,7 @@ public class ElliotWave {
 	 * @param offset
 	 * @return
 	 */
-	static boolean isWave2pc62(double startWave1, double endWave1, double endWave2, float offset) { 
+	public static boolean isWave2pc62(double startWave1, double endWave1, double endWave2, float offset) { 
 		if (endWave1 > startWave1 && endWave2 < endWave1) {
 			double waveRatio = (endWave1 - endWave2)/(endWave1 - startWave1);
 			//System.out.println(waveRatio);
@@ -63,7 +63,7 @@ public class ElliotWave {
 	 * @param offset
 	 * @return
 	 */
-	static boolean isWave3pc162(double startWave1, double endWave1, double endWave2, double endWave3, float offset) { 
+	public static boolean isWave3pc162(double startWave1, double endWave1, double endWave2, double endWave3, float offset) { 
 		if (endWave1 > startWave1 && endWave2 < endWave1 && endWave2 < endWave3) {
 			double waveRatio = (endWave3 - endWave2)/(endWave1 - startWave1);
 			if( waveRatio >= (1.62 - offset) && waveRatio <= (1.62 + offset))  {
@@ -85,7 +85,7 @@ public class ElliotWave {
 	 * @param offset
 	 * @return
 	 */
-	static boolean isWave3pc262(double startWave1, double endWave1, double endWave2, double endWave3, float offset) { 
+	public static boolean isWave3pc262(double startWave1, double endWave1, double endWave2, double endWave3, float offset) { 
 		if (endWave1 > startWave1 && endWave2 < endWave1 && endWave2 < endWave3) {
 			double waveRatio = (endWave3 - endWave2)/(endWave1 - startWave1);
 			if( waveRatio >= (2.62 - offset) && waveRatio <= (2.62 + offset))  {
@@ -107,7 +107,7 @@ public class ElliotWave {
 	 * @param offset
 	 * @return
 	 */
-	static boolean isWave3pc425(double startWave1, double endWave1, double endWave2, double endWave3, float offset) { 
+	public static boolean isWave3pc425(double startWave1, double endWave1, double endWave2, double endWave3, float offset) { 
 		if (endWave1 > startWave1 && endWave2 < endWave1 && endWave2 < endWave3) {
 			double waveRatio = (endWave3 - endWave2)/(endWave1 - startWave1);
 			if( waveRatio >= (4.25 - offset) && waveRatio <= (4.25 + offset))  {
@@ -128,7 +128,7 @@ public class ElliotWave {
 	 * @param offset
 	 * @return
 	 */
-	static boolean isWave4pc24(double endWave2, double endWave3, double endWave4, float offset) { 
+	public static boolean isWave4pc24(double endWave2, double endWave3, double endWave4, float offset) { 
 		if (endWave2 < endWave3 && endWave3 > endWave4) {
 			double waveRatio = (endWave3 - endWave4)/(endWave3 - endWave2);
 			if( waveRatio > (0.24 - offset) && waveRatio < (0.24 + offset))  {
@@ -149,7 +149,7 @@ public class ElliotWave {
 	 * @param offset
 	 * @return
 	 */
-	static boolean isWave4pc38(double endWave2, double endWave3, double endWave4, float offset) { 
+	public static boolean isWave4pc38(double endWave2, double endWave3, double endWave4, float offset) { 
 		if (endWave2 < endWave3 && endWave3 > endWave4) {
 			double waveRatio = (endWave3 - endWave4)/(endWave3 - endWave2);
 			if( waveRatio > (0.38 - offset) && waveRatio < (0.38 + offset))  {
@@ -170,7 +170,7 @@ public class ElliotWave {
 	 * @param offset
 	 * @return
 	 */
-	static boolean isWave4pc50(double endWave2, double endWave3, double endWave4, float offset) { 
+	public static boolean isWave4pc50(double endWave2, double endWave3, double endWave4, float offset) { 
 		if (endWave2 < endWave3 && endWave3 > endWave4) {
 			double waveRatio = (endWave3 - endWave4)/(endWave3 - endWave2);
 			if( waveRatio > (0.50 - offset) && waveRatio < (0.50 + offset))  {
@@ -194,7 +194,7 @@ public class ElliotWave {
 	 * @param offset
 	 * @return
 	 */
-	static boolean isWave5pc100(double startWave1, double endWave1, double endWave2, double endWave3, 
+	public static boolean isWave5pc100(double startWave1, double endWave1, double endWave2, double endWave3, 
 			double endWave4, double endWave5, float offset) {
 		if(endWave1 > startWave1 && endWave5 > endWave4) {
 			if (isWave3pc162(startWave1, endWave1, endWave2, endWave3, 0.05f)) {
@@ -221,7 +221,7 @@ public class ElliotWave {
 	 * @param offset
 	 * @return
 	 */
-	static boolean isWave5pc162(double startWave1, double endWave1, double endWave2, double endWave3, 
+	public static boolean isWave5pc162(double startWave1, double endWave1, double endWave2, double endWave3, 
 			double endWave4, double endWave5, float offset) {
 		if(endWave1 > startWave1 && endWave5 > endWave4) {
 			if (isWave3pc162(startWave1, endWave1, endWave2, endWave3, 0.05f)) {
@@ -248,7 +248,7 @@ public class ElliotWave {
 	 * @param offset
 	 * @return
 	 */
-	static boolean isWave5pc262(double startWave1, double endWave1, double endWave2, double endWave3, 
+	public static boolean isWave5pc262(double startWave1, double endWave1, double endWave2, double endWave3, 
 			double endWave4, double endWave5, float offset) {
 		if(endWave1 > startWave1 && endWave5 > endWave4) {
 			if (isWave3pc162(startWave1, endWave1, endWave2, endWave3, 0.05f)) {

@@ -6,7 +6,7 @@ import systrading.algopop.algorithms.ElliotWave;
 
 /**
  * 
- * @author badahus
+ * @author Hussein Badakhchani
  *
  */
 public class ElliotWaveStaticDataTest {
